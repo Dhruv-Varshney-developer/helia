@@ -1,5 +1,53 @@
 # Changelog
 
+## [4.0.0](https://github.com/Dhruv-Varshney-developer/helia/compare/routers-v3.1.2...routers-v4.0.0) (2025-06-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* fix typo in HTTPGatewayRouter class/interface name ([#664](https://github.com/Dhruv-Varshney-developer/helia/issues/664))
+* helia now uses libp2p@2.x.x
+* the `libp2p` property has been removed from the `Helia` interface in `@helia/interface` - it is still present on the return type of `createHelia` from the `helia` module
+
+### Features
+
+* add @helia/http to monorepo ([#372](https://github.com/Dhruv-Varshney-developer/helia/issues/372)) ([76220cd](https://github.com/Dhruv-Varshney-developer/helia/commit/76220cd5adf45af7fa61fd0a1321de4722b744d6))
+* add cancelReprovide function to routing ([#672](https://github.com/Dhruv-Varshney-developer/helia/issues/672)) ([dc13525](https://github.com/Dhruv-Varshney-developer/helia/commit/dc1352563ab5ed7b204ae702c1e48035d196a470))
+* add provider shuffle option to HTTPGatewayRouter ([#772](https://github.com/Dhruv-Varshney-developer/helia/issues/772)) ([daaa511](https://github.com/Dhruv-Varshney-developer/helia/commit/daaa511a74583844244e6f51d55a8bc25a9f5f02))
+* add static http gateway routing ([#515](https://github.com/Dhruv-Varshney-developer/helia/issues/515)) ([2d070b9](https://github.com/Dhruv-Varshney-developer/helia/commit/2d070b9cfe0e225e4a66be85cceac900516a8a1f))
+* enable customising delegated http router ([#654](https://github.com/Dhruv-Varshney-developer/helia/issues/654)) ([693c82d](https://github.com/Dhruv-Varshney-developer/helia/commit/693c82d2117536d89b2e82d9c482ad807af2e1be))
+
+
+### Bug Fixes
+
+* add doc-check script and export types used by functions ([#637](https://github.com/Dhruv-Varshney-developer/helia/issues/637)) ([4f14996](https://github.com/Dhruv-Varshney-developer/helia/commit/4f14996a9b976f2b60f4c8fe52a4fd1632420749))
+* add tls to default delegated routing filters ([#670](https://github.com/Dhruv-Varshney-developer/helia/issues/670)) ([aecac3d](https://github.com/Dhruv-Varshney-developer/helia/commit/aecac3d92cbd22a7331afee8e6f87ef31a9f7d95))
+* fix typo in HTTPGatewayRouter class/interface name ([#664](https://github.com/Dhruv-Varshney-developer/helia/issues/664)) ([87aa9b4](https://github.com/Dhruv-Varshney-developer/helia/commit/87aa9b4b21593870296c9a1c8b11c9123bbc5da1))
+* http blockbroker loads gateways from routing ([#519](https://github.com/Dhruv-Varshney-developer/helia/issues/519)) ([6a62d1c](https://github.com/Dhruv-Varshney-developer/helia/commit/6a62d1c8dcfadead0498d0bb59958837dc204c91))
+* remove delegated routing api client patch ([#632](https://github.com/Dhruv-Varshney-developer/helia/issues/632)) ([9de08ef](https://github.com/Dhruv-Varshney-developer/helia/commit/9de08ef9c1cbdb723f524672f67574bf1dbed937))
+* update ipns module to v9 and fix double verification of records ([#396](https://github.com/Dhruv-Varshney-developer/helia/issues/396)) ([f2853f8](https://github.com/Dhruv-Varshney-developer/helia/commit/f2853f8bd5bdcee8ab7a685355b0be47f29620e0))
+* update project deps and docs ([77e34fc](https://github.com/Dhruv-Varshney-developer/helia/commit/77e34fc115cbfb82585fd954bcf389ecebf655bc))
+* update to libp2p@2.x.x ([#630](https://github.com/Dhruv-Varshney-developer/helia/issues/630)) ([ec8bf66](https://github.com/Dhruv-Varshney-developer/helia/commit/ec8bf66dd870b42d6e5ef2b41706102397e0d39a))
+
+
+### Documentation
+
+* add spell checker to ci ([#743](https://github.com/Dhruv-Varshney-developer/helia/issues/743)) ([45ca6bc](https://github.com/Dhruv-Varshney-developer/helia/commit/45ca6bc70b1644028500101044595fa0e2199b07))
+* fix grammar - it's -&gt; its ([#565](https://github.com/Dhruv-Varshney-developer/helia/issues/565)) ([155e24d](https://github.com/Dhruv-Varshney-developer/helia/commit/155e24db8c06c33972895d702a656e0c2996f3d9))
+
+
+### Dependencies
+
+* bump aegir from 42.2.11 to 43.0.1 ([#552](https://github.com/Dhruv-Varshney-developer/helia/issues/552)) ([74ccc92](https://github.com/Dhruv-Varshney-developer/helia/commit/74ccc92793a6d0bb4bee714d9fe4fa4183aa4ee8))
+* bump aegir from 43.0.3 to 44.0.1 ([#569](https://github.com/Dhruv-Varshney-developer/helia/issues/569)) ([6952f05](https://github.com/Dhruv-Varshney-developer/helia/commit/6952f05357844e5aa3dffb2afaf261df06b9b7c1))
+* bump aegir from 44.1.4 to 45.0.1 ([#669](https://github.com/Dhruv-Varshney-developer/helia/issues/669)) ([e58e49c](https://github.com/Dhruv-Varshney-developer/helia/commit/e58e49c6aed8ea9d1e9851435a25e33fdbee3781))
+* update aegir to 47.x.x ([#804](https://github.com/Dhruv-Varshney-developer/helia/issues/804)) ([60fbbc2](https://github.com/Dhruv-Varshney-developer/helia/commit/60fbbc2eb08e023e2eac02ae0e89ed143d715084))
+* update all deps ([#792](https://github.com/Dhruv-Varshney-developer/helia/issues/792)) ([d43efc7](https://github.com/Dhruv-Varshney-developer/helia/commit/d43efc7bdfff34071a8e4e22e01f659fbac0b78e))
+* update libp2p patch versions ([917a1bc](https://github.com/Dhruv-Varshney-developer/helia/commit/917a1bceb9e9b56428a15dc3377a963f06affd12))
+* The following workspace dependencies were updated
+  * dependencies
+    * @helia/interface bumped from ^5.3.2 to ^6.0.0
+
 ## [3.1.2](https://github.com/ipfs/helia/compare/routers-v3.1.1...routers-v3.1.2) (2025-05-20)
 
 

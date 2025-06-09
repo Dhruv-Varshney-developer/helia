@@ -1,5 +1,56 @@
 # Changelog
 
+## [6.0.0](https://github.com/Dhruv-Varshney-developer/helia/compare/mfs-v5.0.3...mfs-v6.0.0) (2025-06-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* Fields that would involve DAG traversal have been removed from the output of `fs.stat` - pass the `extended` option to have them returned
+* helia now uses libp2p@2.x.x
+* the `libp2p` property has been removed from the `Helia` interface in `@helia/interface` - it is still present on the return type of `createHelia` from the `helia` module
+* uses multiformats v13
+
+### Features
+
+* add @helia/http to monorepo ([#372](https://github.com/Dhruv-Varshney-developer/helia/issues/372)) ([76220cd](https://github.com/Dhruv-Varshney-developer/helia/commit/76220cd5adf45af7fa61fd0a1321de4722b744d6))
+* initial import ([a70f4eb](https://github.com/Dhruv-Varshney-developer/helia/commit/a70f4eb982e377eeeeb6fd4a53f7baf40c09641b))
+* update helia to v3 and multiformats to v13 ([9f7dc0a](https://github.com/Dhruv-Varshney-developer/helia/commit/9f7dc0a0581524531501fc062fefb6ba26d99c02))
+
+
+### Bug Fixes
+
+* add doc-check script and export types used by functions ([#637](https://github.com/Dhruv-Varshney-developer/helia/issues/637)) ([4f14996](https://github.com/Dhruv-Varshney-developer/helia/commit/4f14996a9b976f2b60f4c8fe52a4fd1632420749))
+* add sideEffects: false to package.json ([#485](https://github.com/Dhruv-Varshney-developer/helia/issues/485)) ([8c45267](https://github.com/Dhruv-Varshney-developer/helia/commit/8c45267a474ab10b2faadfebdab33cfe446e8c03))
+* remove @libp2p/interfaces dep ([#591](https://github.com/Dhruv-Varshney-developer/helia/issues/591)) ([e567717](https://github.com/Dhruv-Varshney-developer/helia/commit/e567717102464a925f87cb10fc05808a50be960e))
+* return simple stats or extended stats ([#760](https://github.com/Dhruv-Varshney-developer/helia/issues/760)) ([325b36f](https://github.com/Dhruv-Varshney-developer/helia/commit/325b36f70624d3dcc25b2723f9e3e2d26e1e5199))
+* support reading identity cids ([#429](https://github.com/Dhruv-Varshney-developer/helia/issues/429)) ([98308f7](https://github.com/Dhruv-Varshney-developer/helia/commit/98308f77488b8196b2d18f78f05ecd2d37456834))
+* update project deps and docs ([77e34fc](https://github.com/Dhruv-Varshney-developer/helia/commit/77e34fc115cbfb82585fd954bcf389ecebf655bc))
+* update to libp2p@2.x.x ([#630](https://github.com/Dhruv-Varshney-developer/helia/issues/630)) ([ec8bf66](https://github.com/Dhruv-Varshney-developer/helia/commit/ec8bf66dd870b42d6e5ef2b41706102397e0d39a))
+* use blockstore interface where possible ([#417](https://github.com/Dhruv-Varshney-developer/helia/issues/417)) ([30c8981](https://github.com/Dhruv-Varshney-developer/helia/commit/30c8981934ffba72d572a7b8b2712ec93b7f4d31))
+* use bytestream methods to add byte streams ([#758](https://github.com/Dhruv-Varshney-developer/helia/issues/758)) ([70b8fa9](https://github.com/Dhruv-Varshney-developer/helia/commit/70b8fa96cb5fe0fddbb0e1528e6685778af90aa8))
+
+
+### Documentation
+
+* add spell checker to ci ([#743](https://github.com/Dhruv-Varshney-developer/helia/issues/743)) ([45ca6bc](https://github.com/Dhruv-Varshney-developer/helia/commit/45ca6bc70b1644028500101044595fa0e2199b07))
+* fix grammar - it's -&gt; its ([#565](https://github.com/Dhruv-Varshney-developer/helia/issues/565)) ([155e24d](https://github.com/Dhruv-Varshney-developer/helia/commit/155e24db8c06c33972895d702a656e0c2996f3d9))
+* update docs to use MFS style API ([#4](https://github.com/Dhruv-Varshney-developer/helia/issues/4)) ([88b23b0](https://github.com/Dhruv-Varshney-developer/helia/commit/88b23b0db4ac9da2a9e94291f2db7b10f436ce00))
+
+
+### Dependencies
+
+* bump @helia/interface from 1.2.2 to 2.0.0 ([#2](https://github.com/Dhruv-Varshney-developer/helia/issues/2)) ([351fae7](https://github.com/Dhruv-Varshney-developer/helia/commit/351fae7a129e642a6f312c9a61609273dec190bf))
+* bump aegir from 42.2.11 to 43.0.1 ([#552](https://github.com/Dhruv-Varshney-developer/helia/issues/552)) ([74ccc92](https://github.com/Dhruv-Varshney-developer/helia/commit/74ccc92793a6d0bb4bee714d9fe4fa4183aa4ee8))
+* bump aegir from 43.0.3 to 44.0.1 ([#569](https://github.com/Dhruv-Varshney-developer/helia/issues/569)) ([6952f05](https://github.com/Dhruv-Varshney-developer/helia/commit/6952f05357844e5aa3dffb2afaf261df06b9b7c1))
+* bump aegir from 44.1.4 to 45.0.1 ([#669](https://github.com/Dhruv-Varshney-developer/helia/issues/669)) ([e58e49c](https://github.com/Dhruv-Varshney-developer/helia/commit/e58e49c6aed8ea9d1e9851435a25e33fdbee3781))
+* **dev:** bump helia from 2.0.1 to 2.0.3 ([#10](https://github.com/Dhruv-Varshney-developer/helia/issues/10)) ([6911470](https://github.com/Dhruv-Varshney-developer/helia/commit/6911470cb43720798fca571669a166eb3689dad2))
+* update aegir to 47.x.x ([#804](https://github.com/Dhruv-Varshney-developer/helia/issues/804)) ([60fbbc2](https://github.com/Dhruv-Varshney-developer/helia/commit/60fbbc2eb08e023e2eac02ae0e89ed143d715084))
+* update all deps ([#792](https://github.com/Dhruv-Varshney-developer/helia/issues/792)) ([d43efc7](https://github.com/Dhruv-Varshney-developer/helia/commit/d43efc7bdfff34071a8e4e22e01f659fbac0b78e))
+* update libp2p patch versions ([917a1bc](https://github.com/Dhruv-Varshney-developer/helia/commit/917a1bceb9e9b56428a15dc3377a963f06affd12))
+* The following workspace dependencies were updated
+  * dependencies
+    * @helia/unixfs bumped from ^5.0.3 to ^6.0.0
+
 ## [5.0.3](https://github.com/ipfs/helia/compare/mfs-v5.0.2...mfs-v5.0.3) (2025-05-20)
 
 
